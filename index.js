@@ -3,7 +3,7 @@ const {chromium, firefox} = require('playwright');
 (async () => {
   for (const browserType of [firefox, chromium]) {
     const browser = await browserType.launch({
-      headless: false,
+      headless: true,
     });
     const context = await browser.newContext({
         viewport: { width: 730, height: 550 },
